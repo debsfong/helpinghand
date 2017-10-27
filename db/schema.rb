@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027010748) do
+ActiveRecord::Schema.define(version: 20171027214237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,40 +20,32 @@ ActiveRecord::Schema.define(version: 20171027010748) do
     t.date "date"
     t.integer "long"
     t.integer "lat"
-    t.time "time"
+    t.time "start_time"
+    t.time "end_time"
     t.integer "volunteers_needed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["date"], name: "index_events_on_date"
     t.index ["org_id"], name: "index_events_on_org_id"
-    t.index ["volunteers_needed"], name: "index_events_on_volunteers_needed"
   end
 
   create_table "organizations", force: :cascade do |t|
-    t.integer "manager_id", null: false
+    t.integer "manager_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["manager_id"], name: "index_organizations_on_manager_id"
   end
 
   create_table "signups", force: :cascade do |t|
-    t.integer "event_id", null: false
-    t.integer "user_id", null: false
+    t.integer "event_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["event_id", "user_id"], name: "index_signups_on_event_id_and_user_id", unique: true
-    t.index ["event_id"], name: "index_signups_on_event_id"
-    t.index ["user_id"], name: "index_signups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username", null: false
-    t.string "password_digest", null: false
-    t.string "session_token", null: false
+    t.string "username"
+    t.string "password_digest"
+    t.string "session_token"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["session_token"], name: "index_users_on_session_token", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end

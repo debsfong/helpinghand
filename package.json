@@ -1,5 +1,35 @@
 {
   "name": "helping_hand",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^3.8.1"
+  },
+  "description": "This application provides a smooth user experience for signing up for volunteer shifts in the San Francisco Bay Area. Getting people interested in volunteering is hard enough already, lets not make signing up another hurdle.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debsfong/helpinghand.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debsfong/helpinghand/issues"
+  },
+  "homepage": "https://github.com/debsfong/helpinghand#readme"
 }

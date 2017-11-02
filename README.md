@@ -20,6 +20,8 @@ This application provides a smooth user experience for signing up for volunteer 
     - [ ] Track volunteer hours
 - [ ] Bonus
     - [ ] Volunteer with group
+    - [ ] Organizations have Volunteer Types
+    - [ ] Organization Manager can add other Admins
 
 ## Schema
 
@@ -29,6 +31,7 @@ This application provides a smooth user experience for signing up for volunteer 
   - session_token
 
 - Organization
+  - title
   - manager_id
 
 - Events
@@ -36,8 +39,25 @@ This application provides a smooth user experience for signing up for volunteer 
   - date
   - location
   - time
-  - volunteers_needed
+  - volunteers_needed (remove for volunteer type)
 
 - Signups
   - event_id
   - user_id
+  - volunteer_type_id (needed for volunteer type bonus)
+
+Bonus:
+
+- Administrators
+  - user_id
+  - org_id
+
+- Volunteer Type
+  - Title
+  - Description
+  - Default: general
+
+- Event Volunteers
+  - event_id
+  - volunteer_type_id
+  - number

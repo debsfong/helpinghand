@@ -27,25 +27,32 @@ ActiveRecord::Schema.define(version: 20171027214237) do
   end
 
   create_table "organizations", force: :cascade do |t|
-    t.integer "manager_id"
+    t.string "title", null: false
+    t.integer "manager_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["manager_id"], name: "index_organizations_on_manager_id"
+    t.index ["title"], name: "index_organizations_on_title"
   end
 
   create_table "signups", force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "user_id"
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["event_id", "user_id"], name: "index_signups_on_event_id_and_user_id", unique: true
+    t.index ["event_id"], name: "index_signups_on_event_id"
+    t.index ["user_id"], name: "index_signups_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password_digest"
-    t.string "session_token"
-    t.string "password"
+    t.string "username", null: false
+    t.string "password_digest", null: false
+    t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["session_token"], name: "index_users_on_session_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end

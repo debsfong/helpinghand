@@ -28,7 +28,7 @@ class User < ApplicationRecord
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
-  def reset_session_token
+  def reset_session_token!
     generate_unique_session_token
     save!
     self.session_token

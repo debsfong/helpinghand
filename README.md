@@ -1,4 +1,4 @@
-# Helping Hand
+# Helping Hand (In Progress)
 
 This application provides a smooth user experience for signing up for volunteer shifts in the San Francisco Bay Area. Getting people interested in volunteering is hard enough already, lets not make signing up another hurdle.
 

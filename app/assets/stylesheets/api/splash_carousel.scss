@@ -1,0 +1,28 @@
+.carousel {
+  // height: 75vh
+}
+
+.carousel-image {
+  height: 80vh;
+  object-fit: cover;
+  // opacity: 0.9;
+}
+
+.carousel::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  margin-top: -80vh;
+  height: 80vh;
+  width: 100%;
+  content: '';
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 3
+}

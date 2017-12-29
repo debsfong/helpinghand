@@ -14,6 +14,7 @@ class SessionLinks extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   openModal(modalType) {
@@ -29,6 +30,20 @@ class SessionLinks extends React.Component {
     });
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    const user = this.state;
+    if (this.state.modalType === "login") {
+      this.props.login({user});
+    } else {
+      this.props.signup({user})
+    }
+  }
+
+  update(field) {
+    return (e) => this.setState({[field]: e.target.value});
+  }
+
   render() {
     return (
       <div>
@@ -41,9 +56,25 @@ class SessionLinks extends React.Component {
           className="session-modal"
           overlayClassName="modal-overlay">
           <h1>Hello Modal!</h1>
+          <form onSubmit={this.handleSubmit} className="session-form">
+            <label>Username
+              <input type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update("username")} />
+            </label>
+            <label>Password
+              <input type="text"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.update("password")} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
         </Modal>
       </div>
     );
+    // <input type="button" value="Guest">Guest Login</input>
   }
 }
 

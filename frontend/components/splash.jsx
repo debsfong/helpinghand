@@ -39,11 +39,12 @@ class Splash extends React.Component {
     let settings = {
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 8000,
       fade: true,
-      speed: 1000,
+      speed: 3000,
       pauseOnHover: false,
-      dots: true
+      // dots: true,
+      arrows: false
     };
 
     return (

@@ -1,3 +1,28 @@
 // Place all the styles related to the Api::Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.session-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: auto;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

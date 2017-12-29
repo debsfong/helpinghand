@@ -1,12 +1,14 @@
 import React from 'react';
+import {Link, Switch, Route} from 'react-router-dom';
+import HeaderContainer from './header/header_container';
+import Splash from './splash';
 
 const App = () => (
   <div>
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Helping Hand</h1>
-      </Link>
-    </header>
+    <HeaderContainer />
+    <Switch>
+      <Route exact path="/" component={Splash} />
+    </Switch>
   </div>
 );
 

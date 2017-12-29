@@ -61,3 +61,5 @@ Bonus:
   - event_id
   - volunteer_type_id
   - number
+
+Icons found here: https://fontawesome.com/icons?d=gallery

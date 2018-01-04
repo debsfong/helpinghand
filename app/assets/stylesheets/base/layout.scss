@@ -1,0 +1,26 @@
+@import "base/fonts.scss";
+
+body, button {
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-size: 110%
+}
+
+i {
+  padding: 3px;
+}
+
+input[type=button], input[type=submit], button {
+  margin: 3px;
+  border: solid 1px black;
+}
+
+input[type=submit] {
+  border: 1px solid black
+}
+
+input {
+  margin: 3px;
+}

@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0px 20px 0px 20px;
+}
+
+.header-buttons {
+  border: none;
+}
+
+.page-title {
+  display: inline-block;
+}

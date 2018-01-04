@@ -35,16 +35,6 @@ ActiveRecord::Schema.define(version: 20171027214237) do
     t.index ["title"], name: "index_organizations_on_title"
   end
 
-  create_table "signups", force: :cascade do |t|
-    t.integer "event_id", null: false
-    t.integer "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["event_id", "user_id"], name: "index_signups_on_event_id_and_user_id", unique: true
-    t.index ["event_id"], name: "index_signups_on_event_id"
-    t.index ["user_id"], name: "index_signups_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
@@ -53,6 +43,16 @@ ActiveRecord::Schema.define(version: 20171027214237) do
     t.datetime "updated_at", null: false
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
+  end
+
+  create_table "volunteers", force: :cascade do |t|
+    t.integer "event_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id", "user_id"], name: "index_volunteers_on_event_id_and_user_id", unique: true
+    t.index ["event_id"], name: "index_volunteers_on_event_id"
+    t.index ["user_id"], name: "index_volunteers_on_user_id"
   end
 
 end

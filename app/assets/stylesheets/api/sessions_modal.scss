@@ -26,3 +26,19 @@
   align-items: center;
   flex-direction: column;
 }
+
+.session-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.session-button {
+  display: inline-block;
+}
+
+.errors li {
+  color: red;
+  font-size: 12px;
+}

@@ -14,11 +14,11 @@
  *= require_self
  */
 
- @import 'base/reset.scss';
 
- .splash {
-   /* background-image: url(http://res.cloudinary.com/dlbxdsfue/image/upload/v1514287405/martins-zemlickis-57243_svv2zk.jpg); */
-   background-size: cover;
-   background-color: #cccccc;
-   height: 75vh;
- }
+@import 'base/reset.scss';
+@import 'base/fonts.scss';
+@import 'base/layout.scss';
+
+@import 'api/header.scss';
+@import 'api/sessions_modal.scss';
+@import 'api/splash_carousel.scss';

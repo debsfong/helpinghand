@@ -5,7 +5,9 @@ import SessionLinksContainer from './session_links_container';
 class Header extends React.Component {
   personalHeader() {
     return (
-      <button className="header-button" onClick={this.props.logout}>Log Out</button>
+      <div className="header-right">
+        <button className="header-button" onClick={this.props.logout}>Log Out</button>
+      </div>
     );
   }
 
@@ -17,12 +19,10 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header>
-        <Link to="/" className="header-link">
-          <h1 className="left">
-            <i className="far fa-hand-peace"></i>
-            Helping Hand
-          </h1>
+      <header className="header">
+        <Link to="/" className="header-left">
+          <i className="far fa-hand-peace"></i>
+          <h1 className="page-title">Helping Hand</h1>
         </Link>
         {this.props.currentUser ? this.personalHeader() : this.sessionLinks()}
       </header>

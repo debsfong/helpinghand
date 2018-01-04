@@ -2,7 +2,6 @@ import React from 'react';
 import Slider from 'react-slick';
 
 class Splash extends React.Component {
-
   createElements() {
     let quotes = [
       '"Service to others is the rent you pay for your room here on Earth." — Muhammad Ali',
@@ -27,7 +26,7 @@ class Splash extends React.Component {
 
     return (
       quotes.map((quote, idx) => (
-        <div className="carousel">
+        <div className="carousel" key={idx}>
           <img className="carousel-image" src={sources[idx]} />
           <h2 className="carousel-text">{quote}</h2>
         </div>

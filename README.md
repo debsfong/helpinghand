@@ -41,7 +41,7 @@ This application provides a smooth user experience for signing up for volunteer 
   - time
   - volunteers_needed (remove for volunteer type)
 
-- Signups
+- Volunteers
   - event_id
   - user_id
   - volunteer_type_id (needed for volunteer type bonus)

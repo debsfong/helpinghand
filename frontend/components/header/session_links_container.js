@@ -4,7 +4,7 @@ import SessionLinks from './session_links';
 
 
 const mapStateToProps = (state) => ({
-  loggedIn: Boolean(state.session.currentUser),
+  currentUser: state.session.currentUser,
   errors: state.errors
 });
 

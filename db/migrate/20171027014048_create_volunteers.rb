@@ -1,4 +1,4 @@
-class CreateSignups < ActiveRecord::Migration[5.1]
+class CreateVolunteers < ActiveRecord::Migration[5.1]
   def change
     create_table :volunteers do |t|
       t.integer :event_id, null: false

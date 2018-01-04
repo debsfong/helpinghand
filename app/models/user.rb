@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
-  has_many :signups
+  has_many :volunteers
   has_many :organizations,
     class_name: "Organization",
     foreign_key: "manager_id"

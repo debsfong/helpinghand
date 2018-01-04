@@ -16,8 +16,6 @@ class SessionLinks extends React.Component {
     this.closeModal = this.closeModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.loginGuest = this.loginGuest.bind(this);
-    this.switchModal = this.switchModal.bind(this);
-    this.displayErrors = this.displayErrors.bind(this);
   }
 
   openModal(modalType) {

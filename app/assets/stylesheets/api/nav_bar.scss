@@ -1,0 +1,17 @@
+@import "base/colors.scss";
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $dark-blue;
+}
+
+.nav-link {
+  color: white;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: $blue;
+}

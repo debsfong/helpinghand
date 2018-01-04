@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, Switch, Route} from 'react-router-dom';
-import { ProtectedRoute, ProtectedComponent } from '../util/route_util.js';
+import { ProtectedRoute, ProtectedComponent, AuthRoute } from '../util/route_util.js';
 import HeaderContainer from './header/header_container';
 import Splash from './splash';
 import EventIndexContainer from './event_index/event_index_container';
@@ -11,8 +11,8 @@ const App = () => (
     <HeaderContainer />
     <ProtectedComponent path="/" component={NavBar} />
     <Switch>
-      <ProtectedRoute path="/home" component={EventIndexContainer} />
-      <Route exact path="/" component={Splash} />
+      <ProtectedRoute path="/events" component={EventIndexContainer} />
+      <AuthRoute path="/" component={Splash} />
     </Switch>
   </div>
 );

@@ -7,12 +7,20 @@ class EventSearch extends React.Component {
   }
 
   render() {
+    let { events } = this.props;
     return (
       <div>
-        <EventIndexItem />
+        <h1>Upcoming Opportunities: </h1>
+        {events.map((event, idx) => (
+          <EventIndexItem event={event} key={idx} />
+        ))}
       </div>
     );
   }
 }
+
+EventSearch.defaultProps = {
+  events: ["event"]
+};
 
 export default EventSearch;

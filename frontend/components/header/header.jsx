@@ -7,7 +7,7 @@ class Header extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.currentUser === null && nextProps.currentUser) {
-      this.props.history.push('/home');
+      this.props.history.push('/events');
     } else if (this.props.currentUser && nextProps.currentUser === null) {
       this.props.history.push('/')
     }
@@ -30,7 +30,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="header">
-        <Link to="/home" className="header-left">
+        <Link to="/events" className="header-left">
           <i className="far fa-hand-peace"></i>
           <h1 className="page-title">Helping Hand</h1>
         </Link>

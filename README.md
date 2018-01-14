@@ -1,5 +1,7 @@
 # Helping Hand (In Progress)
 
+[Live Site](https://helping-hand-project.herokuapp.com/#/)
+
 This application provides a smooth user experience for signing up for volunteer shifts in the San Francisco Bay Area. Getting people interested in volunteering is hard enough already, lets not make signing up another hurdle.
 
 ## Minimum Viable Product
